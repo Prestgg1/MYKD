@@ -2,18 +2,25 @@
 @import "header.css";
 body{
     background-color: rgb(17,31,38);
+    overflow:hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+  }
+body::-webkit-scrollbar-track {
+    background: black;      
+  }
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(69,248,130);  
+    border-radius: 20px;  
 }
 .cursor{
     height: 10px;
     width: 10px;
     position: fixed;
     z-index: -1;
+    display: none;
     border-radius: 50%;
     background:rgb(69,248,130);
 }
-/* @media( min-width: 768px ) {
-    header nav div.rightmenu div.rightmenugrup{
-        display: flex;
-    }
-}
- */

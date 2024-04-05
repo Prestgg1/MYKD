@@ -3,7 +3,7 @@
 }
 .current{
     color: var(--main-color)!important;
-    & hr{
+    hr{
         opacity: 1;
         transform: rotate(50deg);
     }
@@ -14,15 +14,15 @@ header nav{
     padding: 3vw 2vw;
     justify-content: space-between;
     align-items: center;
-    & ul{
+    ul{
         display: none;
     }
-    & .rightmenu{
+    .rightmenu{
         display: flex;
-        & .rightmenugrup{
+        .rightmenugrup{
             display: none;
         }
-        & i.fa-bars{
+        i.fa-bars{
             border: 2px solid var(--main-color);
             padding: 5px;
             display: flex;
@@ -38,21 +38,100 @@ header nav{
     height: 100%;
     position: fixed;
     width: 80%;
-    padding: 3vw 2vw;
     right: -100%;
     top: 0;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
     transition: 250ms right;
     background: rgb(15,22,27);
-    & .logo-and-exit{
-        align-items: center;
-        display: flex;
-        justify-content: space-around;
-        & .exit i.fa-xmark{
-            font-size: 30px;
-            cursor: pointer;
-            color: var(--main-color);
+    table,tr,th{
+        border:solid gray;
+        border-width: 1px 0px 1px 0;
+    }
+    table{
+        width: 100%;
+        tr{
+            text-align: left;
+            color: white;
+            th{
+                width: 100%;
+                padding: 10px 20px;
+                label{
+                    transition: 250ms all;
+                    justify-content: space-between;
+                    display: flex;
+                }
+                &:has(> input:checked){
+                    & label::after{
+                        color: black;
+                        background-color: var(--main-color);
+                        content: "-";
+
+                    }
+                }
+                & label::after{
+                    transition: 250ms all;
+                    text-align: right;
+                    content: "+";
+                    cursor: pointer;
+                    background-color: rgb(24,33,40);
+                    padding: 0 10px;
+                    border-radius: 5px;
+                }
+                input{
+                    display: none;
+                }
+                
+            }
+            
+
         }
     }
+    .rightnavcontainer{
+        width: 100%;
+        padding: 3vw 0vw;
+        .logo-and-exit{
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            .exit svg{
+                font-size: 30px;
+                fill: var(--main-color);
+                cursor: pointer;
+            }
+        }
+        .searchinput{
+            width: 90%;
+            margin: 20px 20px;
+            position: relative;
+            box-sizing: border-box;
+            input{
+                width: 100%;
+                border-radius: 10px;
+                height: 50px;
+                border: 0;
+                outline: none;
+                color: white;
+                font-size: 20px;
+                padding: 1vw 2vw;
+                background-color: rgb(24,33,40);
+                &::placeholder{
+                    color:rgb(205, 205, 205)
+                }
+            }
+
+            svg{
+                position: absolute;
+            
+                bottom: 25%;
+                right: 3%;
+                font-size: 30px;
+                fill: rgb(205, 205, 205);
+            }
+        }
+    }
+
 }
 .navactive{
     right: 0;
@@ -65,7 +144,7 @@ header nav{
             display: none;
             align-items: center;
             justify-content: center;
-            & i.fa-magnifying-glass{
+            i.fa-magnifying-glass{
                 cursor: pointer;
                 color: white;
                 font-size: 20px;
@@ -74,13 +153,13 @@ header nav{
                     color:var(--main-color);
                 }
             }
-            & hr{
+            hr{
                 height: 80%;
                 width: 8px;
                 border: rgb(15,20,24);
                 background: rgb(15,20,24);
             }
-            & .button{
+            .button{
                 position: relative;
                 height: 50px;
                 &:hover{
@@ -94,14 +173,14 @@ header nav{
                     }
 
                 }
-                & a svg{
+                a svg{
                     color: var(--main-color);
                     height: 100%;
                     width: 180px;
                     fill: none;
                     transition: 250ms fill;
                 }
-                & a span{
+                a span{
                     font-size: 18px;
                     position: absolute;
                     left: 25%;
@@ -125,14 +204,20 @@ header nav{
     }
 }
 @media (min-width:1280px){
+    html body{
+        overflow-y: scroll;
+    }
     .fa-bars{
         display: none !important;
+    }
+    body div.cursor{
+        display: block;
     }
     header nav ul{
         display: flex;
         gap: 20px;
         list-style-type: none;
-        & li{
+        li{
             color: white;
             font-weight: bold;
             padding: 10px;
@@ -141,13 +226,13 @@ header nav{
             position: relative;
             &:hover{
                 color: var(--main-color);
-                & hr{
+                hr{
                     opacity: 1;
                     transform: rotate(50deg);
                 }
 
             }
-            & hr{
+            hr{
                 transition: 550ms all;
                 position: absolute;
                 height: 100%;
@@ -156,8 +241,9 @@ header nav{
                 opacity: 0;
                 left: 50%;
                 border-color: var(--main-color);
-
             }
         }
     }
 }
+
+
