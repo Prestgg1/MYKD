@@ -10,8 +10,9 @@
 }
 header nav{
     display: flex;
+    width: 100vw;
     border-radius: 20px;
-    padding: 3vw 2vw;
+    padding: 6vw 4vw;
     justify-content: space-between;
     align-items: center;
     ul.main-menu{
@@ -24,7 +25,7 @@ header nav{
         }
         i.fa-bars{
             border: 2px solid var(--main-color);
-            padding: 5px;
+            padding: 8px 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,6 +35,12 @@ header nav{
         }
     }
 }
+.exit svg,#search-sheet .exit svg{
+    font-size: 30px;
+    fill: var(--main-color);
+
+    cursor: pointer;
+}
 .rightnav{
     height: 100%;
     position: fixed;
@@ -41,6 +48,7 @@ header nav{
     right: -100%;
     top: 0;
     display: flex;
+    z-index: 2;
     align-content: center;
     flex-direction: column;
     transition: 250ms right;
@@ -83,7 +91,7 @@ header nav{
                 }
             }
             &:not(:has(label)){
-                padding: 10px 40px;
+                padding: 10px 20px;
             }
             ul{
                 display: none;
@@ -129,11 +137,6 @@ header nav{
             align-items: center;
             display: flex;
             justify-content: space-around;
-            .exit svg{
-                font-size: 30px;
-                fill: var(--main-color);
-                cursor: pointer;
-            }
         }
         .searchinput{
             width: 90%;
@@ -167,7 +170,7 @@ header nav{
     }
 
 .navactive{
-    right: 0;
+    right: 0 !important;
 }
 @media (min-width: 768px){
     header nav div.rightmenu div.rightmenugrup{
@@ -192,36 +195,7 @@ header nav{
                 border: rgb(15,20,24);
                 background: rgb(15,20,24);
             }
-            .button{
-                position: relative;
-                height: 50px;
-                &:hover{
-                    & a svg{
-                        fill:var(--main-color);
-                    }
-                    & a span{
-                        transition: 750ms color;
-                        color:black;
-                    }
-
-                }
-                a svg{
-                    color: var(--main-color);
-                    height: 100%;
-                    fill: transparent;
-                    width: 180px;
-                    transition-duration: 250ms;
-                    transition-property: fill;
-                }
-                a span{
-                    font-size: 18px;
-                    position: absolute;
-                    left: 25%;
-                    font-weight: 700;
-                    bottom: 25%;
-                    color: white;
-                }
-            }
+            
         }
 }
 @media(min-width:1024px) {
@@ -257,46 +231,33 @@ header nav{
             cursor: pointer;
             transition: 250ms all;
             position: relative;
-            z-index: 0;
-            background: #000;
-/*             ul{
-                z-index: -2;
+            span.sub-mainmenu{
+                opacity: 0;
+                visibility: hidden;
                 position: absolute;
-                height: 0;
+                left: 0;
+                padding: 20px 0;
+                top: -25%;
                 overflow: hidden;
 
-                top:90%;
-                background-color: rgb(24,33,40);
-                li{
-                    width: 10rem;
-                    text-transform: uppercase;
-                }
-            } */
-            span.sub-mainmenu{
-                z-index: -2;
-                display: block;
-                padding: 20px 0;
-                opacity:1;
-                height: 0;
+                transition: 500ms all;
                 ul{
+                    background-color: rgb(24,33,40);
                     list-style-type: none;
-                    border-radius: 8px;
-                    border: 1px solid rgba(128, 128, 128, 0.568);
-                    opacity: 0;
-                }
+                    border: 1px solid rgba(128, 128, 128, 0.521);
+                    li{
+                        width: 20rem;
+                        text-transform: uppercase;
+                }}
             }
             &:hover{
                 span.sub-mainmenu{
-                    padding: 20px 0;
-                    ul{
-                        transition: 1s top;
-                        opacity: 1;
-                        top: 100%;
-                        visibility: visible;
-                        height: auto;
-                        
-                    }
+                    top: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                    
                 }
+                
 
                 color: var(--main-color);
                 hr{
@@ -319,3 +280,110 @@ header nav{
     }
 }
 
+#search-sheet{
+    z-index: 98;
+    position: fixed;
+    height: 100vh;
+    flex-direction: column;
+    top: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms top;
+    width: 100vw;
+    background: #00000081;
+    .exit{
+        right: 5rem;
+        top: 5rem;
+        position: absolute;
+    }
+    h1{
+        color: white;
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    h1::before,h1::after{
+        content: "...";
+        color: var(--main-color);
+    }
+    .searchbar{
+        position: relative;
+        input{
+            outline: none;
+            border-color: var(--main-color);
+            border-width: 0 0 1px 0;
+            background: transparent;
+            padding: 10px;
+            font-size: 2rem;
+            color: white;
+            &::placeholder{
+                text-align: center;
+            }
+        }
+        svg{
+            position: absolute;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            bottom: 25%;
+        }
+    }
+
+}
+
+.button{
+    position: relative;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1;
+    a svg{
+        height: 100%;
+        width: 180px;
+        transition-duration: 250ms;
+        transition-property: fill;
+    }
+    a span{
+        font-size: 18px;
+        position: absolute;
+        left: 25%;
+        font-weight: 700;
+        bottom: 25%;
+    }
+}
+.button-green{
+    a svg{
+        color: white;
+        fill: var(--main-color);
+    }
+    a span{
+        color: black;
+    }
+    &:hover{
+        & a svg{
+            fill:white;
+        }
+        & a span{
+            transition: 750ms color;
+            color:black;
+        } 
+    }
+}
+.button-transparent{
+    a svg{
+        color: var(--main-color);
+        fill: transparent;
+    }
+    a span{
+        color: white;
+    }
+    &:hover{
+        & a svg{
+            fill:var(--main-color);
+        }
+        & a span{
+            transition: 750ms color;
+            color:black;
+        } 
+    }
+}

@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +10,6 @@ a{
 }
 html,body{
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
 }
-

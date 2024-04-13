@@ -1,0 +1,46 @@
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+:root {
+    --main-color: rgb(69,248,130);
+  }
+
+main{
+    width: 100vw;
+    height: 100%;
+    .container{
+        width: 100vw;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        h1,h2{
+            color: white;
+        }
+        .live{
+            color: var(--main-color);
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            font-weight: bolder;
+            padding: 15px;
+            border-radius: 10px;
+            background: linear-gradient(to right, rgba(69, 248, 129, 0.582),transparent);
+        }
+        h1{
+            font-size: 17vw;
+            text-transform: uppercase;
+            font-weight: bolder;
+            text-shadow: 2px 7px 0px rgb(41, 148, 76);
+            font-family: 'Berlin Sans FB Demi', sans-serif;;
+        }
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: 6vw;
+            text-transform: uppercase;
+            font-weight: bolder;
+            letter-spacing: 5px;
+        }
+    }
+}

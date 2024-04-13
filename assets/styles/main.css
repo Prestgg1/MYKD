@@ -1,8 +1,15 @@
 @import "reset.css";
 @import "header.css";
+@import "home.css";
 body{
-    background-color: rgb(17,31,38);
+    background: url('https://themedox.com/demo/mykd/assets/img/slider/slider_bg.jpg') no-repeat scroll;
+    background-size: cover;
+    background-position: center center;
     overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 body::-webkit-scrollbar {
@@ -19,8 +26,17 @@ body::-webkit-scrollbar-thumb {
     height: 10px;
     width: 10px;
     position: fixed;
-    z-index: -1;
+    z-index: 0;
     display: none;
     border-radius: 50%;
     background:rgb(69,248,130);
+}
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: rgb(69,248,130);
+}
+
+::selection {
+  color: black;
+  background: rgb(69,248,130);
 }

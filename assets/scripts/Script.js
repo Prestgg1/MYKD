@@ -11,7 +11,7 @@ bars.addEventListener('click',()=>{
 
 })
 
-document.querySelector('.exit').addEventListener('click',()=>{
+document.querySelector('.logo-and-exit .exit').addEventListener('click',()=>{
     rightnav.classList.remove('navactive')
 })
 
@@ -22,4 +22,7 @@ document.onclick = (e)=>{
     else{
         rightnav.classList.remove('navactive')
     }
-}
+} 
+document.querySelector('#search-sheet .exit').addEventListener('click',()=>{
+    document.querySelector('#search-sheet').style.top = "-100%"
+})
