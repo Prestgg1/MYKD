@@ -26,3 +26,9 @@ document.onclick = (e)=>{
 document.querySelector('#search-sheet .exit').addEventListener('click',()=>{
     document.querySelector('#search-sheet').style.top = "-100%"
 })
+
+/* Quarter */
+document.querySelectorAll('.container img.quarter').forEach((e)=>{
+    e.style.top =`${Math.floor(Math.random()*100)}%`
+    e.style.left =`${Math.floor(Math.random()*100)}%`
+})
