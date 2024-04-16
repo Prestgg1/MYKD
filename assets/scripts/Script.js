@@ -6,6 +6,7 @@ window.addEventListener('mousemove',(e)=>{
 
 let bars = document.querySelector('.fa-bars')
 let rightnav = document.querySelector('.rightnav')
+let rightnavpc = document.querySelector('.rightnavpc')
 bars.addEventListener('click',()=>{
     document.querySelector('.rightnav').classList.toggle('navactive')
 
@@ -15,6 +16,8 @@ document.querySelector('.logo-and-exit .exit').addEventListener('click',()=>{
     rightnav.classList.remove('navactive')
 })
 
+/* rightnavmobile */
+
 document.onclick = (e)=>{
     if(bars.contains(e.target) || rightnav.contains(e.target)){
         
@@ -22,13 +25,22 @@ document.onclick = (e)=>{
     else{
         rightnav.classList.remove('navactive')
     }
-} 
-document.querySelector('#search-sheet .exit').addEventListener('click',()=>{
-    document.querySelector('#search-sheet').style.top = "-100%"
-})
+    if(document.querySelector('.burger').contains(e.target) || rightnavpc.contains(e.target)){
 
-/* Quarter */
-document.querySelectorAll('.container img.quarter').forEach((e)=>{
-    e.style.top =`${Math.floor(Math.random()*100)}%`
-    e.style.left =`${Math.floor(Math.random()*100)}%`
+    }
+    else{
+        rightnavpc.style.right = '-100%'
+    }
+} 
+
+/* rightnavmobile */
+
+
+/* rightnavpc */
+document.querySelector('.burger').addEventListener('click',()=>{
+    rightnavpc.style.right = 0
 })
+document.querySelector('.rightnavpc .logo-and-exit .exit').onclick = ()=>{
+    rightnavpc.style.right = "-100%"
+}
+

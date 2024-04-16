@@ -42,6 +42,11 @@ header nav{
 
     cursor: pointer;
 }
+.logo-and-exit{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
 .rightnav{
     height: 100%;
     position: fixed;
@@ -131,14 +136,10 @@ header nav{
             }
         }
     }
+
     .rightnavcontainer{
         width: 100%;
         padding: 3vw 0vw;
-        .logo-and-exit{
-            align-items: center;
-            display: flex;
-            justify-content: space-around;
-        }
         .searchinput{
             width: 90%;
             margin: 20px 20px;
@@ -199,16 +200,149 @@ header nav{
             
         }
 }
+.rightnavpc{
+    display: none;
+}
 @media(min-width:1024px) {
     header nav div.rightmenu div.rightmenugrup .burger hr{
         margin: 10px;
         background: white;
-        height: 4px;
+        height: 3.5px;
         border-radius: 40px;
-        width: 100%;
+        transition: 500ms all;
+        &:first-child{
+            width: 40%;
+        }
+        &:nth-child(2){
+            width: 80%;
+        }
+        &:last-child{
+            position: relative;
+            left: 20%;
+            width: 60%;
+        }
     }
     .burger{
         cursor: pointer;
+        width: 50px;
+        transition: 500ms width;
+        &:hover{
+            & hr:first-child{
+                width: 80% !important;
+            }
+            & hr:last-child{
+                left: 0 !important;
+                width: 80% !important;
+            }
+        }
+    }
+    .rightnavpc{
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background: #0D141B;
+        height: 100%;
+        width: 30%;
+        transition: 250ms right;
+        .footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: #9599A4;
+            font-weight: bold;
+            padding: 30px 0 30px 20px;
+            background: #090F16;
+
+        }
+        .logo-and-exit{
+            padding: 2vw 0;
+            border-color: black;
+            border-style: solid;
+            border-width: 0px 0 2px 0;
+            .exit{
+                background: #223547;
+                padding: 10px 10px 5px 10px;
+                border-radius: 50%;
+                transition: 250ms all;
+                &:hover{
+                    background-color: var(--main-color);
+                    svg{
+                        fill: #0D141B;
+                    }
+                }
+            }
+        }
+        .rightnavcontainer{
+            color: white;
+            width: 100%;
+            padding: 25px 40px 50px 40px;
+            h1{
+                font-size: 30px;
+                letter-spacing: 1px;
+            }
+            h4{
+                margin: 40px 0 22px;
+                font-size: 16px;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                list-style-type: square;
+                li{
+                    color: #9599A4;
+                    transition: 250ms all;
+                    &:hover{
+                        color: var(--main-color);
+                    }
+                }
+            }
+            h5{
+                color: var(--main-color);
+                margin: 40px 0 22px;
+                letter-spacing: 0.5px;
+                font-size: 16px;
+            }
+            input{
+                display: block;
+                background: transparent;
+                padding: 15px 80px 15px 22px;
+                font: 2rem;
+                border: 1px solid #223547;
+                width: 100%;
+                outline: none;
+                color: #9599A4;
+                margin: 40px 0;
+                &:focus{
+                    border: 1px solid #9599A4;
+                }
+            }
+            p{
+                color: #9599A4;
+            }
+            .social{
+                display: flex;
+                gap: 10px;
+                border-width: 2px 0 0 0;
+                border-style: solid;
+                border-color: #223547;
+                margin: 20px 0 0 0;
+                padding: 20px 0 0 0;
+                svg{
+                    height: 20px;
+                    fill: white;
+                    width: 20px;
+                    transition: 300ms fill;
+                    &:hover{
+                        fill: var(--main-color);
+                    }
+                }
+
+            }
+        }
     }
 }
 @media (min-width:1280px){
@@ -217,6 +351,9 @@ header nav{
     }
     .fa-bars{
         display: none !important;
+    }
+    header nav{
+        padding: 0px;
     }
     body div.cursor{
         display: block;

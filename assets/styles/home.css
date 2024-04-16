@@ -22,7 +22,7 @@ main{
         height: 100%;
         display:flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
 
@@ -31,7 +31,32 @@ main{
             z-index: -1;
             animation: 2s linear infinite showhidden;
         }
-        .texts{
+        .ads-and-texts{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+            .slider__brand-list{
+                list-style-type: none;
+                display: flex;
+                gap: 2rem;
+                li{
+                    transition: 300ms opacity;
+                }
+                &:has(li:first-child:hover) li:not(li:first-child){
+                    opacity: 0.5;
+                }
+                &:has(li:nth-child(2):hover) li:not(li:nth-child(2)){
+                    opacity: 0.5;
+                }
+                &:has(li:last-child:hover) li:not(li:last-child){
+                    opacity: 0.5;
+                }
+            }
+
+        }
+        .ads-and-texts .texts{
             display: flex;
             align-items: center;
             justify-content: center;
