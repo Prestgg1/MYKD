@@ -353,7 +353,7 @@ header nav{
         display: none !important;
     }
     header nav{
-        padding: 0px;
+        padding: 20px;
     }
     body div.cursor{
         display: block;
