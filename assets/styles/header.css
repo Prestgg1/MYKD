@@ -9,9 +9,16 @@
         transform: rotate(50deg);
     }
 }
-header nav{
+header{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 102;
+}
+header nav{    
     display: flex;
     width: 100vw;
+    background: transparent;
     border-radius: 20px;
     padding: 6vw 4vw;
     justify-content: space-between;
@@ -354,6 +361,7 @@ header nav{
     }
     header nav{
         padding: 20px;
+        justify-content: space-around;
     }
     body div.cursor{
         display: block;

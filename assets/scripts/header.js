@@ -206,10 +206,7 @@ document.querySelector('#search-sheet .exit').addEventListener('click',()=>{
 })
 
 /* Quarter */
-document.querySelectorAll('.container img.quarter').forEach((e)=>{
-    e.style.top =`${Math.floor(Math.random()*100)}%`
-    e.style.left =`${Math.floor(Math.random()*100)}%`
-})
+
 document.onclick = (e)=>{
     if(bars.contains(e.target) || rightnav.contains(e.target)){
         
@@ -230,7 +227,7 @@ bars.addEventListener('click',()=>{
 
 })
 
-document.querySelector('.logo-and-exit .exit').addEventListener('click',()=>{
+document.querySelector('.rightnavcontainer .logo-and-exit .exit').addEventListener('click',()=>{
     rightnav.classList.remove('navactive')
 })
 

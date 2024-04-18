@@ -4,7 +4,7 @@ window.addEventListener('mousemove',(e)=>{
     cursor.style.top = -10+e.pageY + 'px'
 })
 
-document.querySelectorAll('.container img.quarter').forEach((e)=>{
+document.querySelectorAll('section.main-area img.quarter').forEach((e)=>{
     e.style.top =`${Math.floor(Math.random()*100)}%`
     e.style.left =`${Math.floor(Math.random()*100)}%`
 })

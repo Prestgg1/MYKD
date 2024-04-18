@@ -16,28 +16,56 @@
 main{
     width: 100vw;
     height: 100%;
-    .container{
+    z-index: 0;
+    section.main-area{
         position: relative;
         width: 100vw;
-        height: 100%;
+        height: 100vh;
         display:flex;
-        flex-direction: row;
-        justify-content: space-between;
+        background: url('https://themedox.com/demo/mykd/assets/img/slider/slider_bg.jpg') no-repeat scroll;
+        background-size: cover;
+        background-position: center center;
+        flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-
+        &::after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+            background-color: var(--main-color);
+            content: "";
+            height: 50px;
+        }
+        &::before{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            background-color: var(--main-color);
+            content: "";
+            height: 50px;
+        }
         img.quarter{
             position: absolute;
-            z-index: -1;
+            z-index: 1;
             animation: 2s linear infinite showhidden;
         }
+        
         .ads-and-texts{
             display: flex;
             flex-direction: column;
+            width: 100%;
             height: 100%;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            .slider__brand-list{
+            gap: 5vh;
+            .ads .slider__brand-list{
                 list-style-type: none;
                 display: flex;
                 gap: 2rem;
@@ -54,6 +82,12 @@ main{
                     opacity: 0.5;
                 }
             }
+            .ads{
+                .image img{
+                    width: 90vw;
+                    height: 90vw;
+                }
+            }
 
         }
         .ads-and-texts .texts{
@@ -62,6 +96,7 @@ main{
             justify-content: center;
             flex-direction: column;
             text-align: left;
+            gap: 20px;
             h1,h2{
                 color: white;
             }
@@ -74,10 +109,10 @@ main{
                 font-weight: 900;
                 padding: 15px;
                 border-radius: 10px;
-                background: linear-gradient(to right, rgba(69, 248, 129, 0.582),transparent);
+                background: linear-gradient(to right, rgba(69, 248, 129, 0.349),transparent);
             }
             h1{
-                font-size: clamp(2rem,17vw,8rem);
+                font-size: clamp(1.8rem,15vw,8rem);
                 text-transform: uppercase;
                 font-weight: bolder;
                 text-shadow: 2px 7px 0px rgb(41, 148, 76);
@@ -86,25 +121,38 @@ main{
             h2{
                 width: 100%;
                 text-align: center;
-                font-size: clamp(1rem,7vw,5rem);
+                font-size: clamp(1rem,5vw,5rem);
                 text-transform: uppercase;
                 font-weight: bolder;
                 letter-spacing: 5px;
             }
         }
         
-        .image{
-            overflow: hidden;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto;
-        }
+
     }
 }
+
+.image{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
 @media (min-width:1280px) {
-    main .container .texts {
-        align-items: left !important;
+    main section.main-area .ads-and-texts .texts {
+        align-items: start;
     }
+    main section.main-area{
+        flex-direction: row;
+        .ads-and-texts{
+            width: auto;
+            align-items:start;
+            .ads .image{
+                display: none;
+            }
+        }
+    }
+
+
 }
