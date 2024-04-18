@@ -1,0 +1,69 @@
+section.nft-item__area{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    background: #0B0E13;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    div.nft{
+        display: flex;
+        color: white;
+        gap: 10px;
+        border-radius: 15px;
+        background-image: linear-gradient(90deg, #0c0e12 0%, rgba(31, 41, 53, 0.36078) 100%);
+        padding: 25px;
+        img{
+            border-radius: 15px;
+        }
+        &:hover{
+            border: 1px solid green;
+        }
+        .details{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            align-items: start;
+            h1{
+                text-transform: uppercase;
+            }
+            .nft-item__avatar{
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                color: #858587;
+                a{
+                    color: #858587;
+                }
+                a:hover{
+                    color: #FFBE18;
+                }
+            }
+            .nft-item__price{
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                padding: 14px 15px 14px 20px;
+                color: #858587;
+                background-image: linear-gradient(to top, rgb(12, 14, 18) 0%, rgb(30, 44, 56) 100%);
+                border-radius: 8px;
+                border: 1px solid #858587;
+                a.bid-btn{
+                    background: #FFBE18;
+                    color: black;
+                    transition: 550ms background-color;
+                    border-radius: 10px;
+                    padding: 11px 14px;
+                    font-weight: 600;
+                    &:hover{
+                        background-color: rgb(69,248,130);
+                    }
+                }
+            }
+        }
+    }
+
+}

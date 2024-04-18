@@ -14,13 +14,13 @@
     }
 }
 main{
-    width: 100vw;
+    width: 100%;
     height: 100%;
     z-index: 0;
     section.main-area{
         position: relative;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         display:flex;
         background: url('https://themedox.com/demo/mykd/assets/img/slider/slider_bg.jpg') no-repeat scroll;
         background-size: cover;
@@ -61,7 +61,6 @@ main{
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 100%;
             justify-content: center;
             align-items: center;
             gap: 5vh;
@@ -84,8 +83,8 @@ main{
             }
             .ads{
                 .image img{
-                    width: 90vw;
-                    height: 90vw;
+                    width: 300px;
+                    height: 300px;
                 }
             }
 
@@ -131,7 +130,10 @@ main{
 
     }
 }
+.ads-and-texts+.image{
+    display: none;
 
+}
 .image{
     overflow: hidden;
     display: flex;
@@ -143,16 +145,29 @@ main{
     main section.main-area .ads-and-texts .texts {
         align-items: start;
     }
+    .ads-and-texts+.image{
+        display: flex;
+        object-fit: cover;
+        img{
+            width: 450px;
+            height: 550px;
+        }
+    }
     main section.main-area{
-        flex-direction: row;
+        flex-direction: row !important;
+        padding: 0;
         .ads-and-texts{
             width: auto;
+            height: 100%;
             align-items:start;
             .ads .image{
                 display: none;
             }
         }
     }
-
-
+}
+@media (min-width:612px) {
+   section.main-area{
+    padding: clamp(450px,60vw,612px) 0;
+   }
 }
