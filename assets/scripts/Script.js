@@ -31,4 +31,10 @@ document.querySelectorAll('section.main-area img.quarter').forEach((e)=>{
     e.style.top =`${Math.floor(Math.random()*100)}%`
     e.style.left =`${Math.floor(Math.random()*100)}%`
 })
-
+document.addEventListener('DOMContentLoaded',()=>{
+  setTimeout(()=>{
+    document.querySelector('.lds-ring').classList.toggle('lds-hidden')
+  },500)
+  
+  
+})

@@ -68,6 +68,9 @@ main{
                 list-style-type: none;
                 display: flex;
                 gap: 2rem;
+                a img{
+                    max-width: 90%;
+                }
                 li{
                     transition: 300ms opacity;
                 }
