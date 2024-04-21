@@ -55,6 +55,24 @@ main{
             position: absolute;
             z-index: 1;
             animation: 2s linear infinite showhidden;
+            &:first-child{
+                left: 23%;
+                top: 17%;
+            }
+            &:nth-child(2){
+                right: 19%;
+                bottom: 80%;
+
+            }
+            &:nth-child(3){
+                right: 47%;
+                bottom: 40%;
+
+            }
+            &:nth-child(4){
+                right: 40%;
+                top: 45%;
+            }
         }
         
         .ads-and-texts{
@@ -169,7 +187,7 @@ main{
         }
     }
 }
-@media (min-width:612px) {
+@media (min-height:667px) and (max-width:700px) {
    section.main-area{
     padding: clamp(450px,60vw,612px) 0;
    }

@@ -19,10 +19,112 @@ section.about__area{
         font-size: 45px;
         letter-spacing: 1px;
         color: white;
+        &::after{
+            content: "";
+            display: block;
+            background-image: url('https://themedox.com/demo/mykd/assets/img/bg/title_shape.svg');
+            width: 65px;
+            height: 5px;
+            margin: 20px auto 0;
+        }
     }
     h5{
         font-size: 14px;
         letter-spacing: 2px;
         color: rgb(69,248,130);
+    }
+    div.btns{
+        display:flex;
+        gap: 40px;
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bolder;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 20px;
+            padding: 14px 35px;
+            line-height: 1;
+            position: relative;
+            overflow: hidden;
+            &:first-child{
+                border: 2px solid rgb(69,248,130);
+                transition: 500ms background-color;
+                &:hover{
+                    background-color: rgb(69,248,130);
+                    color: black;
+                }
+                &::after{
+                    content: "";
+                    right: -2px;
+                    position: absolute;
+                    top: 50%;
+                     -webkit-transform: translateY(-50%) rotate(180deg);
+                    -moz-transform: translateY(-50%) rotate(180deg);
+                    -ms-transform: translateY(-50%) rotate(180deg);
+                    -o-transform: translateY(-50%) rotate(180deg);
+                    transform: translateY(-50%) rotate(180deg);
+                    background-image: url('https://themedox.com/demo/mykd/assets/img/icons/btn_shape01.png');
+                    width: 15px;
+                    height: 51px;
+                    pointer-events: none;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: -2px;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    background-image: url('https://themedox.com/demo/mykd/assets/img/icons/btn_shape01.png');
+                    width: 15px;
+                    height: 51px;
+                    pointer-events: none;
+                }
+                }
+            &:last-child{
+                border: 2px solid #FFBE17;
+                transition: 500ms background-color;
+                &:hover{
+                    background-color: #FFBE17;
+                    color: black;
+                }
+                &::after{
+                    content: "";
+                    right: -2px;
+                    position: absolute;
+                    top: 50%;
+                     -webkit-transform: translateY(-50%) rotate(180deg);
+                    -moz-transform: translateY(-50%) rotate(180deg);
+                    -ms-transform: translateY(-50%) rotate(180deg);
+                    -o-transform: translateY(-50%) rotate(180deg);
+                    transform: translateY(-50%) rotate(180deg);
+                    background-image: url('https://themedox.com/demo/mykd/assets/img/icons/btn_shape02.png');
+                    width: 15px;
+                    height: 51px;
+                    pointer-events: none;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: -2px;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    background-image: url('https://themedox.com/demo/mykd/assets/img/icons/btn_shape02.png');
+                    width: 15px;
+                    height: 51px;
+                    pointer-events: none;
+                }
+            }
+        }
     }
 }
