@@ -14,8 +14,8 @@
     }
 }
 main{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
     z-index: 0;
     section.main-area{
         position: relative;
@@ -25,6 +25,7 @@ main{
         background: url('https://themedox.com/demo/mykd/assets/img/slider/slider_bg.jpg') no-repeat scroll;
         background-size: cover;
         background-position: center center;
+        padding: 158px 0 54px;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
@@ -162,7 +163,7 @@ main{
     justify-content: center;
     height: auto;
 }
-@media (min-width:1280px) {
+@media (min-width:1180px) {
     main section.main-area .ads-and-texts .texts {
         align-items: start;
     }
@@ -176,7 +177,7 @@ main{
     }
     main section.main-area{
         flex-direction: row !important;
-        padding: 0;
+        padding: 158px 0 54px;
         .ads-and-texts{
             width: auto;
             height: 100%;
@@ -187,8 +188,13 @@ main{
         }
     }
 }
-@media (min-height:667px) and (max-width:700px) {
-   section.main-area{
-    padding: clamp(450px,60vw,612px) 0;
-   }
-}
+@media (max-width: 767.98px) {
+    .slider__bg {
+      padding: 160px 0 55px;
+    }
+  }
+@media (max-width: 362px) {
+    .slider__bg {
+      padding: 160px 0 80px;
+    }
+  }

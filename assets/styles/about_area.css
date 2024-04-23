@@ -123,8 +123,62 @@ section.about__area{
                     width: 15px;
                     height: 51px;
                     pointer-events: none;
+                    
                 }
             }
+        }
+    }
+    .avatars{
+        display: flex;
+        
+        ul{
+            display: flex;
+            position: relative;
+            padding: 1rem;
+            gap: 20px;
+            flex-wrap: wrap;
+            list-style-type: none;
+            &::before,&::after{
+                content: "";
+                background: linear-gradient(90deg, transparent 0%, rgb(69,248,130) 50%, transparent 100%);
+                height: 1px;
+                width: 100%;
+                position: absolute;
+            }
+            &::before{
+                top: 0;
+                left: 0;
+            }
+            &::after{
+                bottom: 0;
+                right: 0;
+            }
+            li{
+                border-radius: 100%;
+                border-color: chocolate;
+                border-width: 0px 2px 0px 2px;
+                border-style: solid;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding: 4px;
+                img{
+                    border-radius: 100%;
+                    border-color: chocolate;
+                    border-width: 0px 2px 0px 2px;
+                    border-style: solid;
+                    transition: 500ms all;
+                    
+                }
+                transition: 300ms all;
+                &:hover{
+                        border-color: rgb(69,248,130);
+                        img{
+                            border-color: rgb(69,248,130);
+                        }
+                }
+            }
+
         }
     }
 }
