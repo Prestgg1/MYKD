@@ -9,7 +9,11 @@ section.nft-item__area{
     align-items: center;
     div.nft{
         display: flex;
+        width:100%;
         color: white;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         gap: 10px;
         border-radius: 15px;
         background-image: linear-gradient(90deg, #0c0e12 0%, rgba(31, 41, 53, 0.36078) 100%);
@@ -22,10 +26,12 @@ section.nft-item__area{
         }
         .details{
             display: flex;
+            width: 100%;
+            align-items: center;
             flex-direction: column;
             justify-content: center;
             gap: 10px;
-            align-items: start;
+
             h1{
                 text-transform: uppercase;
             }
@@ -44,14 +50,16 @@ section.nft-item__area{
             }
             .nft-item__price{
                 display: flex;
+                width: 90%;
                 gap: 10px;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
                 padding: 14px 15px 14px 20px;
                 color: #858587;
                 background-image: linear-gradient(to top, rgb(12, 14, 18) 0%, rgb(30, 44, 56) 100%);
                 border-radius: 8px;
-                border: 1px solid #858587;
+                background-color: #121a23;
+                border: 1px solid rgba(76, 76, 76, 0.5);
                 a.bid-btn{
                     background: #FFBE18;
                     color: black;
@@ -67,4 +75,16 @@ section.nft-item__area{
         }
     }
 
+}
+@media (min-width: 768px){
+    section.nft-item__area div.nft{
+        flex-direction: row;
+        width:auto;
+        .details{
+            width: auto;
+            .nft-item__price{
+                width: auto;
+            }
+        }
+    }
 }

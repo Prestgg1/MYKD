@@ -35,3 +35,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.querySelector('.lds-ring').style.display = 'none';
   },700)
 })
+window.addEventListener("scroll",()=>{
+  console.log('Sasda')
+})

@@ -245,3 +245,13 @@ document.querySelector('.burger').addEventListener('click',()=>{
 document.querySelector('.rightnavpc .logo-and-exit .exit').onclick = ()=>{
     rightnavpc.style.right = "-100%"
 }
+/* window.onwheel = e => {
+    if(e.deltaY >= 0){
+      // Wheel Down
+      console.log('Down');
+    } else {
+      // Wheel Up
+      console.log('Up');
+    }
+};
+ */
