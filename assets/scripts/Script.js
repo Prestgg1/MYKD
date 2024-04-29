@@ -1,6 +1,8 @@
 const cursor = document.querySelector('.cursor')
-
-
+window.addEventListener('mousemove',(e)=>{
+  cursor.style.transform = `translate3d(${e.pageX}px,${e.pageY}px,0px)`
+})
+/* 
 let mouseX = 0;
 let mouseY = 0;
 let circleX = 0;
@@ -26,7 +28,7 @@ function animateCircle() {
 
 animateCircle();
 
-
+ */
 document.addEventListener('DOMContentLoaded',()=>{
   setTimeout(()=>{
     document.querySelector('.lds-ring').classList.toggle('lds-hidden');
@@ -34,7 +36,34 @@ document.addEventListener('DOMContentLoaded',()=>{
   setTimeout(()=>{
     document.querySelector('.lds-ring').style.display = 'none';
   },700)
+  
 })
-window.addEventListener("scroll",()=>{
-  console.log('Sasda')
-})
+let lastScrollY;
+document.body.onscroll=()=>{
+  console.log(window.scrollY)
+  let currentScroll = window.scrollY;
+  if(currentScroll<=87){
+    document.querySelector('header').classList.remove('header-hidden')
+    document.querySelector('header').classList.remove('header-visible')
+    document.querySelector('.upper').classList.remove('upper-show')
+}
+if(currentScroll>=lastScrollY && !document.querySelector('header').classList.contains('header-hidden') ){
+    document.querySelector('header').classList.add('header-hidden')
+    document.querySelector('header').classList.remove('header-visible')
+}
+if(currentScroll<lastScrollY && !document.querySelector('header').classList.contains('header-visible') && currentScroll>=87){
+    document.querySelector('header').classList.add('header-visible')
+    document.querySelector('header').classList.remove('header-hidden')
+}
+if(currentScroll>=100){
+  document.querySelector('.upper').classList.add('upper-show')
+}
+lastScrollY=currentScroll;
+}
+document.querySelector('.upper').onclick = ()=>{
+  window.scrollTo({
+    top:0,
+    left:0,
+    behavior:'smooth'
+  })
+}

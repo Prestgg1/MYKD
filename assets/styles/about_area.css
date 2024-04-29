@@ -189,6 +189,7 @@ section.about__area{
         width: 70vw;
         display: flex;
         justify-content: center;
+        flex-direction: column;
         gap: 30px 30px;
         .about01-content{
             display: flex;
@@ -214,6 +215,7 @@ section.about__area{
             }
             & .row:first-child{
                 display: flex;
+                flex-direction: column;
                 flex: auto;
                 gap: 20px;
                 margin: 0 0 30px;
@@ -270,6 +272,16 @@ section.about__area{
         }
     }
 }
-@media (min-width: 1280px) {
-    
+@media (min-width: 1200px) {
+    section.about__area .about01{
+        flex-direction:row;
+        
+    }
+}
+@media (min-width: 768px) {
+    section.about__area .about01 .about01-content .row{
+        &:first-child{
+            flex-direction: row;
+        }
+    }
 }

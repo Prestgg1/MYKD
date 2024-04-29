@@ -167,6 +167,9 @@ main{
     main section.main-area .ads-and-texts .texts {
         align-items: start;
     }
+    main section.main-area{
+        height: 100vh;
+    }
     .ads-and-texts+.image{
         display: flex;
         object-fit: cover;

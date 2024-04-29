@@ -16,6 +16,21 @@ header{
     left: 0%;
     z-index: 102;
 }
+.header-visible{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#182029;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+}
+.header-hidden{
+    opacity: 0;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    transition: all 0.5s ease-in;
+}
 header nav{    
     display: flex;
     width: 100vw;
@@ -354,9 +369,6 @@ header nav{
     }
 }
 @media (min-width:1280px){
-    html body{
-        overflow-y: scroll;
-    }
     .fa-bars{
         display: none !important;
     }
