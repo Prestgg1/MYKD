@@ -9,6 +9,8 @@
     <link rel="icon" href="https://themedox.com/mykd/wp-content/uploads/2023/10/favicon.png" sizes="32x32">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
 
@@ -173,9 +175,60 @@
                             </div>
                         </div> 
                     </div>
-
-
-                 
+                    <div class="galery">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img src="https://themedox.com/demo/mykd/assets/img/gallery/gallery05.jpg" alt="">
+                            <div class="between">
+                                <h3>Dota 2 Tournament</h3>
+                                <p>Rate 85%</p>
+                            </div></div>
+                            <div class="swiper-slide"><img src="https://themedox.com/demo/mykd/assets/img/gallery/gallery01.jpg" alt="">
+                                <div class="between">
+                                    <h3>Dota 2 Tournament</h3>
+                                    <p>Rate 85%</p>
+                                </div></div>
+                            <div class="swiper-slide"><img src="https://themedox.com/demo/mykd/assets/img/gallery/gallery02.jpg" alt="">
+                                <div class="between">
+                                        <h3>Dota 2 Tournament</h3>
+                                        <p>Rate 85%</p>
+                                </div></div>
+                            <div class="swiper-slide"><img src="https://themedox.com/demo/mykd/assets/img/gallery/gallery03.jpg" alt="">
+                                <div class="between">
+                                    <h3>Dota 2 Tournament</h3>
+                                    <p>Rate 85%</p>
+                                </div></div>
+                            <div class="swiper-slide"><img src="https://themedox.com/demo/mykd/assets/img/gallery/gallery04.jpg" alt="">
+                                <div class="between">
+                                    <h3>Dota 2 Tournament</h3>
+                                    <p>Rate 85%</p>
+                                </div></div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                    
+                      <!-- Swiper JS -->
+                      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                    
+                      <!-- Initialize Swiper -->
+                      <script>
+                        var swiper = new Swiper(".mySwiper", {
+                            watchSlidesProgress: true,
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                            effect: "coverflow",
+                            grabCursor: true,
+                            loop: true,
+                            centeredSlides: true,
+                                coverflowEffect: {
+                                },
+                                scrollbar: {
+                                    el: ".swiper-scrollbar",
+                                    hide: true,
+                                },
+                        });
+                      </script>
                 </section>
             </div>
 
