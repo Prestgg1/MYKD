@@ -67,3 +67,15 @@ document.querySelector('.upper').onclick = ()=>{
     behavior:'smooth'
   })
 }
+let allimages = document.querySelectorAll('.swiper-slide img');
+console.log(allimages)
+allimages.forEach(element => {
+  element.addEventListener('mousemove',()=>{
+    cursor.classList.add('cursor-pointer')
+    cursor.innerText = 'VIEW IMAGE'
+  });
+  element.addEventListener('mouseleave',()=>{
+    cursor.classList.remove('cursor-pointer')
+    cursor.innerText = ''
+  });
+});

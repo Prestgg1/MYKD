@@ -191,6 +191,11 @@ main{
         }
     }
 }
+@media  (min-height:720px) and (min-width:1200px){
+    main section.main-area{
+        padding: 0;
+    }
+}
 @media (max-width: 767.98px) {
     .slider__bg {
       padding: 160px 0 55px;

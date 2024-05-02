@@ -1,0 +1,33 @@
+section.users{
+    background: url('https://themedox.com/demo/mykd/assets/img/bg/team_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .text{
+        color: white;
+        text-align: center;
+        span{
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: rgb(69,248,130);
+            letter-spacing: 2px;
+        }
+        h3{
+            font-size: 45px;
+            letter-spacing: 1px;
+            font-weight: 900;
+            &::after{
+                content: '';
+                display: block;
+                background-image: url('https://themedox.com/demo/mykd/assets/img/bg/title_shape.svg');
+                width: 65px;
+                height: 5px;
+                margin: 20px auto 0;
+            }
+        }
+    }
+}
