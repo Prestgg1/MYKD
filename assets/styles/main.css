@@ -53,12 +53,12 @@ html{
   top: -1%;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: black;
   font-weight: bold;
   padding: 20px 10px;
   align-items: center;
   border-radius: 50%;
-  display: flex;
+  display: none;
   background:rgb(69,248,130);
   left: -2%;
 }

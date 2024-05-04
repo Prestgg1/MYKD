@@ -1,8 +1,8 @@
 section.users{
     background: url('https://themedox.com/demo/mykd/assets/img/bg/team_bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
     display: flex;
+    padding-top: 130px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -27,6 +27,98 @@ section.users{
                 width: 65px;
                 height: 5px;
                 margin: 20px auto 0;
+            }
+        }
+    }
+    .users-grup{
+        margin: 20px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        .user{
+            padding: 35px;
+            position: relative;
+            background-color: #1C242F;
+            border-radius: 15px;
+            gap: 30px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1;
+
+            img{
+                border-radius: 50%;
+                border: 3px solid white;
+                box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.21), inset 0px 3px 9px 0px rgba(0, 0, 0, 0.92);
+                max-width: 224px;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -60px;
+                width: 70px;
+                height: 320px;
+                background: rgb(69,248,130);
+                -webkit-transform: rotate(-55deg);
+                -moz-transform: rotate(-55deg);
+                -ms-transform: rotate(-55deg);
+                -o-transform: rotate(-55deg);
+                transform: rotate(-55deg);
+                -webkit-transition: all 0.3s ease-out 0s;
+                -moz-transition: all 0.3s ease-out 0s;
+                -ms-transition: all 0.3s ease-out 0s;
+                -o-transition: all 0.3s ease-out 0s;
+                transition: all 0.3s ease-out 0s;
+                opacity: 0.55;
+                z-index: -1;
+               /*  z-index: -1; */
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                right: 0;
+                top: -60px;
+                width: 70px;
+                height: 320px;
+                background: rgb(69,248,130);
+                -webkit-transform: rotate(-55deg);
+                -moz-transform: rotate(-55deg);
+                -ms-transform: rotate(-55deg);
+                -o-transform: rotate(-55deg);
+                transform: rotate(55deg);
+                -webkit-transition: all 0.3s ease-out 0s;
+                -moz-transition: all 0.3s ease-out 0s;
+                -ms-transition: all 0.3s ease-out 0s;
+                -o-transition: all 0.3s ease-out 0s;
+                transition: all 0.3s ease-out 0s;
+                opacity: 0.55;
+                z-index: -1;
+            }
+            &:hover{
+                &::before{
+                    opacity: 1;
+                }
+                &::after{
+                    opacity: 1;
+                }
+            }
+            .user-about{
+                text-align: center;
+                h4{
+                    color: white;
+                    letter-spacing: 1px;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+                .subtitle{
+                    font-size: 16px;
+                    color: rgb(69,248,130);
+                }
             }
         }
     }

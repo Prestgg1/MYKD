@@ -379,6 +379,9 @@ header nav{
     body div.cursor{
         display: block;
     }
+    .cursor-pointer{
+        display: flex;
+    }
     header nav ul.main-menu{
         display: flex;
         gap: 20px;

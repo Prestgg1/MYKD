@@ -79,3 +79,15 @@ allimages.forEach(element => {
     cursor.innerText = ''
   });
 });
+var swiper = new Swiper(".mySwiper", {
+  watchSlidesProgress: true,
+  slidesPerView: window.innerWidth>768? 3:1,
+  spaceBetween: 30,
+  effect: "coverflow",
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
+      coverflowEffect: {
+      },
+      
+});
