@@ -2,7 +2,7 @@ section.users{
     background: url('https://themedox.com/demo/mykd/assets/img/bg/team_bg.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    padding-top: 130px;
+    padding: 130px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -47,6 +47,7 @@ section.users{
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: all 0.3s ease-out 0s;
             flex-direction: column;
             z-index: 1;
 
@@ -106,6 +107,7 @@ section.users{
                 &::after{
                     opacity: 1;
                 }
+                transform: translateY(-1rem);
             }
             .user-about{
                 text-align: center;

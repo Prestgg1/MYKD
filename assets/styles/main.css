@@ -2,6 +2,7 @@
 @import "header.css";
 @import "home.css";
 @import "loading.css";
+@import "video__area.css";
 @import "nft-item.css";
 @import "about_area.css";
 @import "users.css";
@@ -39,8 +40,8 @@ html{
     z-index: 1;
     transform: translate3d(0,0,0);
     transition: 100ms all;
-    top: -0.5%;
-    left: -0.5%;
+    top: -0.1%;
+    left: -0.3%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     display: none;
