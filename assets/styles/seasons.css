@@ -1,0 +1,77 @@
+section.seasons{
+    padding: 20px 0;
+    background: url('https://www.themedox.com/demo/mykd/assets/img/bg/roadmap_bg.jpg') center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    .mobilroad{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        h1{
+            font-size: 55px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 1;
+            color: white;
+            margin: 0 0 28px;
+        }
+        p{
+            max-width: 95%;
+            letter-spacing: 1px;
+            margin: 0 0 35px;
+            color: grey;
+        }
+        .button{
+            display: inline-block;
+        }
+    }
+    .roadmap{
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background: -moz-linear-gradient(90deg, #10161c 0%, var(--tg-theme-primary) 100%);
+            background: -webkit-linear-gradient(90deg, #10161c 0%, var(--tg-theme-primary) 100%);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            }
+    .season{
+        border-radius: 8px;
+        padding: 45px;
+        width: 400px;
+        background-color: #1b242e;
+        margin: 20px 0;
+        height: 400px;
+        ul{
+            list-style: none;
+            li{
+                color:grey;
+                font-weight: bold;
+            }
+        }
+        img{
+            opacity: 0;
+        }
+    }
+        h2{
+            color: white;
+            font-size: 30px;
+            font-weight: bolder;
+            line-height: 1;
+            margin: 0 0 22px;
+        }
+    }
+}

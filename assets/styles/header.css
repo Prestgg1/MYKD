@@ -514,15 +514,34 @@ header nav{
     a span{
         font-size: 18px;
         position: absolute;
-        left: 25%;
+        left: 50%;
+        transform: translate(-50%,50%);
         font-weight: 700;
-        bottom: 25%;
+        bottom: 50%;
     }
 }
 .button-green{
     a svg{
         color: white;
         fill: var(--main-color);
+    }
+    a span{
+        color: black;
+    }
+    &:hover{
+        & a svg{
+            fill:white;
+        }
+        & a span{
+            transition: 750ms color;
+            color:black;
+        } 
+    }
+}
+.button-orange{
+    a svg{
+        color: white;
+        fill: orange;
     }
     a span{
         color: black;
