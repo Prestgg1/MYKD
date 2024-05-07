@@ -1,16 +1,18 @@
 section.seasons{
-    padding: 20px 0;
+    padding: 150px 20%;
     background: url('https://www.themedox.com/demo/mykd/assets/img/bg/roadmap_bg.jpg') center center no-repeat;
     background-size: cover;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
     justify-content: center;
+    gap: 50px;
     .mobilroad{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
+        width: 50%;
         gap: 20px;
         justify-content: center;
         h1{
@@ -23,25 +25,27 @@ section.seasons{
             margin: 0 0 28px;
         }
         p{
-            max-width: 95%;
-            letter-spacing: 1px;
-            margin: 0 0 35px;
             color: grey;
         }
         .button{
             display: inline-block;
         }
+        #roadmap{
+            width: 400px;
+            transition: transform 1s cubic-bezier(0, 0, 0, 1);;
+        }
     }
     .roadmap{
+        position: relative;
         &::before{
             content: "";
             position: absolute;
-            left: 0;
-            top: 0;
+            left: -20px;
+            top: 5px;
             width: 6px;
-            height: 100%;
-            background: -moz-linear-gradient(90deg, #10161c 0%, var(--tg-theme-primary) 100%);
-            background: -webkit-linear-gradient(90deg, #10161c 0%, var(--tg-theme-primary) 100%);
+            height: 95%;
+            background: -moz-linear-gradient(90deg, #10161c 0%, rgb(69,248,130) 100%);
+            background: -webkit-linear-gradient(90deg, #10161c 0%, rgb(69,248,130) 100%);
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             -o-border-radius: 5px;
@@ -51,19 +55,52 @@ section.seasons{
     .season{
         border-radius: 8px;
         padding: 45px;
+        position: relative;
         width: 400px;
         background-color: #1b242e;
-        margin: 20px 0;
-        height: 400px;
+        margin: 0px 0 20px 0;
+        &:hover{
+            img{
+                opacity: 0.5;
+                visibility: visible;
+            }
+        }
         ul{
             list-style: none;
             li{
                 color:grey;
+                margin: 10px 0;
+                position: relative;
                 font-weight: bold;
+                &:hover{
+                    &::before{
+                        background: orange;
+                    }
+                }
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    top: 50%;
+                    left: -8%;
+                    transition: 500ms all ease-in-out;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: rgb(69,248,130);
+                    margin-right: 10px;
+                }
             }
         }
         img{
+            transition: 0.5s all;
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            bottom: 5%;
             opacity: 0;
+
         }
     }
         h2{
@@ -73,5 +110,10 @@ section.seasons{
             line-height: 1;
             margin: 0 0 22px;
         }
+    }
+}
+@media (min-width: 768px){
+    section.seasons{
+        flex-direction: row;
     }
 }

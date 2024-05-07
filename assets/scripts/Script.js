@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 })
 let lastScrollY;
 document.body.onscroll=()=>{
-  console.log(window.scrollY)
   let currentScroll = window.scrollY;
   if(currentScroll<=87){
     document.querySelector('header').classList.remove('header-hidden')
@@ -68,7 +67,6 @@ document.querySelector('.upper').onclick = ()=>{
   })
 }
 let allimages = document.querySelectorAll('.swiper-slide img');
-console.log(allimages)
 allimages.forEach(element => {
   element.addEventListener('mousemove',()=>{
     cursor.classList.add('cursor-pointer')
@@ -91,3 +89,38 @@ var swiper = new Swiper(".mySwiper", {
       },
       
 });
+
+
+const options = {
+};
+
+let lastlastScroll;
+const element = document.querySelector('#roadmap');
+let sum =0;
+function imageActing(){
+   let currentScroll = window.scrollY;
+   if(currentScroll>=lastlastScroll){
+      sum++;
+   }
+   else{
+    sum--;
+   }
+  element.style.transform = `translateY(${sum}px)`
+  lastlastScroll=currentScroll;
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      window.addEventListener('scroll',imageActing)
+      console.log(entry)
+    }
+    else{
+      window.removeEventListener('scroll',imageActing)
+      element.style.translateY=`0px`
+      console.log(entry)
+    }
+  });
+}, options);
+
+
+observer.observe(element);
