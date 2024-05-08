@@ -116,7 +116,7 @@ const observer = new IntersectionObserver((entries) => {
     }
     else{
       window.removeEventListener('scroll',imageActing)
-      element.style.translateY=`0px`
+      element.style.transform = "translateY(0px)"
       console.log(entry)
     }
   });

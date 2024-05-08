@@ -1,22 +1,23 @@
 section.seasons{
-    padding: 150px 20%;
+    padding: 150px 0;
     background: url('https://www.themedox.com/demo/mykd/assets/img/bg/roadmap_bg.jpg') center center no-repeat;
     background-size: cover;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     gap: 50px;
     .mobilroad{
         display: flex;
         flex-direction: column;
-        align-items: start;
-        width: 50%;
+        align-items: center; /* start */
+        width: 80%; /* 50% */
         gap: 20px;
         justify-content: center;
         h1{
-            font-size: 55px;
+            font-size: clamp(30px,10vw,55px);
+            text-align: center;
             font-weight: bolder;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -26,6 +27,7 @@ section.seasons{
         }
         p{
             color: grey;
+            text-align: center;
         }
         .button{
             display: inline-block;
@@ -43,6 +45,7 @@ section.seasons{
             left: -20px;
             top: 5px;
             width: 6px;
+            
             height: 95%;
             background: -moz-linear-gradient(90deg, #10161c 0%, rgb(69,248,130) 100%);
             background: -webkit-linear-gradient(90deg, #10161c 0%, rgb(69,248,130) 100%);
@@ -54,9 +57,9 @@ section.seasons{
             }
     .season{
         border-radius: 8px;
-        padding: 45px;
+        padding: clamp(40px,8vw,45px);/* 45px */
         position: relative;
-        width: 400px;
+        width: 90vw; /* 400px */
         background-color: #1b242e;
         margin: 0px 0 20px 0;
         &:hover{
@@ -67,9 +70,11 @@ section.seasons{
         }
         ul{
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             li{
                 color:grey;
-                margin: 10px 0;
                 position: relative;
                 font-weight: bold;
                 &:hover{
@@ -82,14 +87,13 @@ section.seasons{
                     display: inline-block;
                     width: 20px;
                     top: 50%;
-                    left: -8%;
+                    left: -2%;
                     transition: 500ms all ease-in-out;
-                    transform: translateY(-50%);
+                    transform: translateY(-50%) translateX(-100%);
                     position: absolute;
                     height: 20px;
                     border-radius: 50%;
                     background: rgb(69,248,130);
-                    margin-right: 10px;
                 }
             }
         }
@@ -112,8 +116,17 @@ section.seasons{
         }
     }
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
     section.seasons{
+        padding: 150px 20%;
+        align-items: start;
         flex-direction: row;
+        .mobilroad{
+            align-items: center;
+            width: 50%;
+        }
+        .roadmap .season{
+            width: 400px;
+        }
     }
 }

@@ -188,7 +188,7 @@ section.about__area{
     }
     .about01{
         margin: 80px 0 0;
-        width: 70vw;
+        width: 90vw;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -277,6 +277,12 @@ section.about__area{
 @media (min-width: 1200px) {
     section.about__area .about01{
         flex-direction:row;
+        
+    }
+}
+@media (min-width: 1300px) {
+    section.about__area .about01{
+        width: 70vw;
         
     }
 }
