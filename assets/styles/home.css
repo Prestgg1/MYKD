@@ -16,7 +16,7 @@
 main{
     width: 100vw;
     overflow-x: hidden;
-    z-index: 0;
+    z-index: 1;
     section.main-area{
         position: relative;
         width: 100%;

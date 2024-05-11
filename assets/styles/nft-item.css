@@ -49,10 +49,8 @@ section.nft-item__area{
                 }
             }
             .nft-item__price{
-                display: flex;
                 width: 90%;
                 gap: 10px;
-                justify-content: space-between;
                 align-items: center;
                 padding: 14px 15px 14px 20px;
                 color: #858587;
