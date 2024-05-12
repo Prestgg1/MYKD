@@ -48,11 +48,11 @@ document.querySelector('.upper').onclick = ()=>{
 }
 let allimages = document.querySelectorAll('.mySwiper .swiper-slide img');
 allimages.forEach(element => {
-  element.addEventListener('mousemove',()=>{
+  element.addEventListener('mouseover',()=>{
     cursor.classList.add('cursor-pointer')
     cursor.innerText = 'VIEW IMAGE'
   });
-  element.addEventListener('mouseleave',()=>{
+  element.addEventListener('mouseout',()=>{
     cursor.classList.remove('cursor-pointer')
     cursor.innerText = ''
   });

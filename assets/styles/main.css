@@ -42,7 +42,7 @@ html{
   left: -0.2%;
   height: 10px;
   border-radius: 50%;
-  z-index: 100;
+  z-index: 1;
   background: rgb(69,248,130);
   }
 .scalehidden{
