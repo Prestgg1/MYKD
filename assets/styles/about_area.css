@@ -50,6 +50,7 @@ section.about__area{
             padding: 14px clamp(20px,5vw,35px);
             line-height: 1;
             position: relative;
+            z-index: 1;
             overflow: hidden;
             &:first-child{
                 border: 2px solid rgb(69,248,130);
@@ -133,6 +134,8 @@ section.about__area{
     .avatars{
         display: flex;
         justify-content: center;
+        position: relative;
+        z-index: 1;
         align-items: center;
         ul{
             display: flex;

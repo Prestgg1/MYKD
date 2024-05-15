@@ -45,14 +45,14 @@ document.querySelector('.upper').onclick = ()=>{
     left:0,
     behavior:'smooth'
   })
-}
+} 
 let allimages = document.querySelectorAll('.mySwiper .swiper-slide img');
 allimages.forEach(element => {
-  element.addEventListener('mouseover',()=>{
+  element.addEventListener('pointermove',()=>{
     cursor.classList.add('cursor-pointer')
     cursor.innerText = 'VIEW IMAGE'
   });
-  element.addEventListener('mouseout',()=>{
+  element.addEventListener('mouseleave',()=>{
     cursor.classList.remove('cursor-pointer')
     cursor.innerText = ''
   });
@@ -102,3 +102,4 @@ const observer = new IntersectionObserver((entries) => {
 
 
 observer.observe(element);
+

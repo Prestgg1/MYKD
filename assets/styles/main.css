@@ -3,6 +3,7 @@
 @import "home.css";
 @import "loading.css";
 @import "video__area.css";
+@import 'footer.css';
 @import "seasons.css";
 @import "nft-item.css";
 @import "trend.css";
@@ -40,9 +41,11 @@ html{
   transition: 100ms all;
   top: -0.1%;
   left: -0.2%;
+  visibility: visible;
+  pointer-events: none;
   height: 10px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 1100;
   background: rgb(69,248,130);
   }
 .scalehidden{
@@ -51,7 +54,7 @@ html{
 .cursor-pointer{
   height: auto;
   width: 80px;
-  top: -1%;
+  top: -3.5%;
   justify-content: center;
   text-align: center;
   color: black;

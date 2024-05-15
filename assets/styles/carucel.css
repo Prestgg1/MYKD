@@ -6,9 +6,12 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 3;
 }
 .mySwiper {
+      z-index: -1;
       width: 90vw;
+      position: relative;
       flex-shrink: 0;
       height: clamp(350px,70vh,600px);
       display: flex;
