@@ -85,6 +85,8 @@ main{
             .ads .slider__brand-list{
                 list-style-type: none;
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 gap: 2rem;
                 a img{
                     max-width: 90%;

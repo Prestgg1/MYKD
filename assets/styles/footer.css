@@ -55,6 +55,16 @@ footer{
 
         }
         .newsletter{
+            input{
+                background-color: #1F2935;
+                padding: 20px;
+                border: 0;
+                border-radius: 8px;
+                outline: none;
+                &::placeholder{
+                    color: rgb(175, 175, 175);
+                }
+            }
         }
     }
     .subfooter{

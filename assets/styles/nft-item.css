@@ -11,10 +11,10 @@ section.nft-item__area{
         display: flex;
         width:100%;
         color: white;
+        border: 1px solid #8585873d;
         align-items: center;
+        transition: 550ms all;
         justify-content: center;
-        z-index: 1;
-        position: relative;
         flex-direction: column;
         gap: 10px;
         border-radius: 15px;
@@ -24,7 +24,7 @@ section.nft-item__area{
             border-radius: 15px;
         }
         &:hover{
-            border: 1px solid green;
+            border: 1px solid rgb(69,248,130);
         }
         .details{
             display: flex;

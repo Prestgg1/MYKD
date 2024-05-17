@@ -134,8 +134,6 @@ section.about__area{
     .avatars{
         display: flex;
         justify-content: center;
-        position: relative;
-        z-index: 1;
         align-items: center;
         ul{
             display: flex;

@@ -11,12 +11,11 @@ a{
 body{
     width: 100%;
     min-height:100%;
-    overflow:scroll;
+    overflow-x: hidden;
 }
 html{
     min-height:100%;
-    overflow: scroll;
 }
 main{
-    overflow: scroll;
+    overflow: hidden;
 }
