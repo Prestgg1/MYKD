@@ -221,7 +221,6 @@ document.onclick = (e)=>{
         rightnavpc.style.right = '-100%'
     }
 } 
-
 bars.addEventListener('click',()=>{
     document.querySelector('.rightnav').classList.toggle('navactive')
 
