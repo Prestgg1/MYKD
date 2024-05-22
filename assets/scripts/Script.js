@@ -12,10 +12,10 @@ window.addEventListener('mouseover',()=>{
 window.addEventListener('load',()=>{
   setTimeout(()=>{
     document.querySelector('.lds-ring').classList.toggle('lds-hidden');
-  })
+  },1000)
   setTimeout(()=>{
     document.querySelector('.lds-ring').style.display = 'none';
-  })
+  },1000)
   
 })
 let lastScrollY;

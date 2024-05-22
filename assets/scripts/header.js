@@ -22,7 +22,7 @@ header.insertAdjacentHTML('beforeend', `
         <span class="sub-mainmenu">
             <ul>
                 <li>Home one</li>
-                <li>home two</li>
+                <li><a href="/index-2.html">home two</a></li>
             </ul>
         </span>
     </li>
