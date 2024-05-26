@@ -9,15 +9,7 @@ window.addEventListener('mouseover',()=>{
   document.querySelector('.cursor').classList.remove('scalehidden');
 })
 
-window.addEventListener('load',()=>{
-  setTimeout(()=>{
-    document.querySelector('.lds-ring').classList.toggle('lds-hidden');
-  },1000)
-  setTimeout(()=>{
-    document.querySelector('.lds-ring').style.display = 'none';
-  },1000)
-  
-})
+
 let lastScrollY;
 window.addEventListener('scroll',()=>{
   let currentScroll = window.scrollY;

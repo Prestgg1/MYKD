@@ -1,0 +1,33 @@
+@import '../texts.css';
+main {
+    width: 100%;
+    overflow-x: hidden;
+  section.main-area {
+    background: url("https://themedox.com/demo/mykd/assets/img/slider/banner_bg.jpg")
+      no-repeat center center;
+    background-size: cover;
+    padding: 310px 0 295px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .texts{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+  }
+}
+@media (max-width: 1500px) {
+  main section.main-area {
+    padding: 260px 0 220px;
+  }
+}
+@media (max-width: 767.98px) {
+  main section.main-area {
+    padding: 180px 0 150px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}

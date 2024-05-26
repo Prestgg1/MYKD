@@ -15,13 +15,14 @@ header.insertAdjacentHTML('beforeend', `
     </div> 
 <nav>
 <div class="logo">
-    <img src="https://themedox.com/mykd/wp-content/themes/mykd/assets/img/logo/logo.png" style="max-height: 40px" alt="Logo">
+<a href="/"><img src="https://themedox.com/mykd/wp-content/themes/mykd/assets/img/logo/logo.png" style="max-height: 40px" alt="Logo"></a>
+    
 </div>
 <ul class="main-menu">
     <li class="current">HOME <hr>
         <span class="sub-mainmenu">
             <ul>
-                <li>Home one</li>
+                <li><a href="/index.html">Home one</a></li>
                 <li><a href="/index-2.html">home two</a></li>
             </ul>
         </span>

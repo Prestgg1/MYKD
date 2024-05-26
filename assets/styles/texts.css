@@ -1,0 +1,25 @@
+div.texts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1,
+  h2 {
+    color: white;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 15vw, 8rem);
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 2px 7px 0px rgb(41, 148, 76);
+    font-family: "Berlin Sans FB Demi", sans-serif;
+  }
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1rem, 5vw, 5rem);
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 5px;
+  }
+}
