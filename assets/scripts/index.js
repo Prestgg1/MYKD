@@ -1,6 +1,25 @@
 
 
-let allimages = document.querySelectorAll('.mySwiper .swiper-slide img');
+var allimages = document.querySelectorAll('.mySwiper .swiper-slide img');
+var swipper = new Swiper(".Swipper", {
+  slidesPerView: (()=>{
+    if(window.innerWidth>1000){
+        return 3
+    }
+    else if(window.innerWidth>768 && window.innerWidth<1000){
+        return 2
+    }
+    else{
+        return 1
+    }
+  })(),
+  spaceBetween: 20,
+  loop:true,
+  navigation: {
+  nextEl: ".swiper-sag",
+  prevEl: ".swiper-sol",
+  },
+});
 allimages.forEach(element => {
   element.addEventListener('pointermove',()=>{
     cursor.classList.add('cursor-pointer')
@@ -39,12 +58,15 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-const options = {
+var options = {
 };
 
-let lastlastScroll;
-const element = document.querySelector('#roadmap');
-let sum =0;
+
+
+
+var lastlastScroll;
+var element = document.querySelector('#roadmap');
+var sum =0;
 function imageActing(){
    let currentScroll = window.scrollY;
    if(currentScroll>=lastlastScroll){
@@ -56,7 +78,7 @@ function imageActing(){
   element.style.transform = `translateY(${sum}px)`
   lastlastScroll=currentScroll;
 }
-const observer = new IntersectionObserver((entries) => {
+var observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       window.addEventListener('scroll',imageActing)
