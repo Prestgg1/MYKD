@@ -15,7 +15,7 @@ header.insertAdjacentHTML('beforeend', `
     </div> 
 <nav>
 <div class="logo">
-<a href="./"><img src="https://themedox.com/mykd/wp-content/themes/mykd/assets/img/logo/logo.png" style="max-height: 40px" alt="Logo"></a>
+<a href="./index.html"><img src="https://themedox.com/mykd/wp-content/themes/mykd/assets/img/logo/logo.png" style="max-height: 40px" alt="Logo"></a>
     
 </div>
 <ul class="main-menu">
@@ -246,3 +246,25 @@ document.querySelector('.rightnavpc .logo-and-exit .exit').onclick = ()=>{
     rightnavpc.style.right = "-100%"
 }
 AOS.init();
+
+let lastScrollY;
+window.addEventListener('scroll',()=>{
+  let currentScroll = window.scrollY;
+  if(currentScroll<=87){
+    document.querySelector('header').classList.remove('header-hidden')
+    document.querySelector('header').classList.remove('header-visible')
+    document.querySelector('.upper').classList.remove('upper-show')
+}
+if(currentScroll>=lastScrollY && !document.querySelector('header').classList.contains('header-hidden') ){
+    document.querySelector('header').classList.add('header-hidden')
+    document.querySelector('header').classList.remove('header-visible')
+}
+if(currentScroll<lastScrollY && !document.querySelector('header').classList.contains('header-visible') && currentScroll>=87){
+    document.querySelector('header').classList.add('header-visible')
+    document.querySelector('header').classList.remove('header-hidden')
+}
+if(currentScroll>=100){
+  document.querySelector('.upper').classList.add('upper-show')
+}
+lastScrollY=currentScroll;
+})
