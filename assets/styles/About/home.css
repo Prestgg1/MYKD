@@ -1,0 +1,49 @@
+main {
+  width: 100vw;
+  overflow-x: hidden;
+  section.main-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 110px 0 75px;
+    position: relative;
+    background-image: url("https://themedox.com/demo/mykd/assets/img/bg/breadcrumb_bg01.jpg");
+    &::before {
+      left: 0;
+      -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
+    }
+    &::after {
+      right: 0%;
+      -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      background-color: rgb(69, 248, 130);
+    }
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      bottom: 0;
+      background-color: rgb(69, 248, 130);
+      height: clamp(30px, 5vh, 50px);
+    }
+    div.header {
+      text-align: center;
+      h1 {
+        font-size: 50px;
+        color: white;
+
+        letter-spacing: 2px;
+      }
+    }
+  }
+  img {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+
+}

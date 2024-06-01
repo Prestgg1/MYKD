@@ -22,6 +22,18 @@
     </header>
     <script src="assets/scripts/header.js"></script>
         <main data-barba="container">
+            <script>
+                let current = document.querySelectorAll('.main-menu li');
+                current.forEach(element => {
+                    if(element.classList.length==1){
+                        element.classList.remove('current');
+                        return;
+                    }
+                });
+                current[0].classList.add('current');
+                let b = document.querySelectorAll('.main-menu li .sub-mainmenu ul li')[0];
+                b.classList.add('current');
+            </script>
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
             <link rel="stylesheet" href="assets/styles/Homeone/style.css">
             <section class="main-area">

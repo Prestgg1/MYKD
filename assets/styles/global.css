@@ -140,3 +140,9 @@ body .blackbox{
     }
   }
 }
+.white{
+  color:white;
+}
+.bold{
+  font-weight: bolder;
+}

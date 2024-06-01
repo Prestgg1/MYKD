@@ -15,19 +15,19 @@ header.insertAdjacentHTML('beforeend', `
     </div> 
 <nav>
 <div class="logo">
-<a href="./index.html"><img src="https://themedox.com/mykd/wp-content/themes/mykd/assets/img/logo/logo.png" style="max-height: 40px" alt="Logo"></a>
+<a href="/index.html"><img src="https://themedox.com/mykd/wp-content/themes/mykd/assets/img/logo/logo.png" style="max-height: 40px" alt="Logo"></a>
     
 </div>
 <ul class="main-menu">
-    <li class="current">HOME <hr>
+    <li>HOME <hr>
         <span class="sub-mainmenu">
             <ul>
-                <li><a href="./index.html">Home one</a></li>
-                <li><a href="./index-2.html">home two</a></li>
+                <li><a href="/index.html">Home one<hr></a></li>
+                <li><a href="/index-2.html">home two<hr></a></li>
             </ul>
         </span>
     </li>
-    <li>ABOUT US <hr>
+    <li><a href="/pages/about.html">ABOUT US</a><hr>
     </li>
     <li>TOURNAMENT <hr>
         <span class="sub-mainmenu">
