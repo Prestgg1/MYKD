@@ -27,7 +27,7 @@ header.insertAdjacentHTML('beforeend', `
             </ul>
         </span>
     </li>
-    <li><a href="/pages/about.html">ABOUT US</a><hr>
+    <li><a href="./pages/about.html">ABOUT US</a><hr>
     </li>
     <li>TOURNAMENT <hr>
         <span class="sub-mainmenu">
