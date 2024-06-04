@@ -27,7 +27,7 @@ header.insertAdjacentHTML('beforeend', `
             </ul>
         </span>
     </li>
-    <li><a href="./pages/about.html">ABOUT US</a><hr>
+    <li><a href="/pages/about.html">ABOUT US</a><hr>
     </li>
     <li>TOURNAMENT <hr>
         <span class="sub-mainmenu">
@@ -139,7 +139,7 @@ header.insertAdjacentHTML('beforeend', `
     <li><label for="home"> Home <input type="checkbox" id="home"></label>
     <ul>
         <hr>
-        <li>HOME ONE</li>
+        <li> HOME ONE </li>
         <hr>
         <li>HOME TWO</li>
     </ul>
