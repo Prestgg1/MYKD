@@ -42,7 +42,7 @@ barba.init({
           loading.style.display = "none";
         }
       });
-    }
+    },
   }],
   views: [{
     namespace: 'home',
@@ -54,15 +54,14 @@ barba.init({
       document.querySelectorAll('.main-menu li')[0].classList.add("current");
       document.querySelectorAll('.main-menu li')[1].classList.add("current");
     },
-    after(){
-      const bottomDOM = document.querySelector("body main")
-      const newScript = document.createElement("script");
-      const oldScript = document.querySelector(".main-script");
+    afterEnter(){
+      var bottomDOM = document.querySelector("body main")
+      var newScript = document.createElement("script");
+      var oldScript = document.querySelector(".main-script");
       newScript.src = "/assets/scripts/index.js";
       newScript.className = "main-script";
       oldScript.remove();
       bottomDOM.append(newScript);
-      console.log(bottomDOM)
       newScript.setAttribute('defer', true)
     }
   },
