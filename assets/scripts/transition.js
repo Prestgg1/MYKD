@@ -12,7 +12,7 @@ let loading = document.querySelector('.lds-ring');
 barba.init({
   sync:true,
   transitions: [{
-    name: 'opacity-transition',
+    name: 'home',
     once(){
       return gsap.to('.lds-ring', {
         duration: 0.5,
@@ -43,7 +43,28 @@ barba.init({
         }
       });
     }
-  }]
+  }],
+  views: [{
+    namespace: 'home',
+    beforeEnter() {
+      // update the menu based on user navigation
+      document.querySelectorAll('.main-menu li').forEach(element => {
+        element.classList.remove("current");
+      });
+      document.querySelectorAll('.main-menu li')[0].classList.add("current");
+      document.querySelectorAll('.main-menu li')[1].classList.add("current");
+    },
+  },
+  {
+    namespace: 'about',
+    beforeEnter() {
+      document.querySelectorAll('.main-menu li').forEach(element => {
+        element.classList.remove("current");
+      });
+      document.querySelectorAll('.main-menu li')[3].classList.add("current");
+    },
+  },
+]
 });
 
 

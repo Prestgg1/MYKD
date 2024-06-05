@@ -48,16 +48,7 @@
     </svg>
     <header></header>
     <script src="../assets/scripts/header.js"></script>
-    <main data-barba="container">
-      <script>
-        const current = document.querySelectorAll(".main-menu li");
-        current.forEach((element) => {
-          element.classList.remove("current");
-          console.log(element.textContent);
-        });
-
-        document.querySelectorAll(".main-menu li")[3].classList.add("current");
-      </script>
+    <main data-barba="container" data-barba-namespace="about">
       <link rel="stylesheet" href="../assets/styles/About/style.css" />
       <section class="main-area">
         <div class="header">
