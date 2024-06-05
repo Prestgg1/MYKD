@@ -54,6 +54,17 @@ barba.init({
       document.querySelectorAll('.main-menu li')[0].classList.add("current");
       document.querySelectorAll('.main-menu li')[1].classList.add("current");
     },
+    after(){
+      const bottomDOM = document.querySelector("body main")
+      const newScript = document.createElement("script");
+      const oldScript = document.querySelector(".main-script");
+      newScript.src = "/assets/scripts/index.js";
+      newScript.className = "main-script";
+      oldScript.remove();
+      bottomDOM.append(newScript);
+      console.log(bottomDOM)
+      newScript.setAttribute('defer', true)
+    }
   },
   {
     namespace: 'about',
@@ -62,6 +73,16 @@ barba.init({
         element.classList.remove("current");
       });
       document.querySelectorAll('.main-menu li')[3].classList.add("current");
+    },
+  },
+  {
+    namespace: 'hometwo',
+    beforeEnter() {
+      document.querySelectorAll('.main-menu li').forEach(element => {
+        element.classList.remove("current");
+      });
+      document.querySelectorAll('.main-menu li')[0].classList.add("current");
+      document.querySelectorAll('.main-menu li')[2].classList.add("current");
     },
   },
 ]

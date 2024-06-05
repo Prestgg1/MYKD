@@ -431,19 +431,6 @@
                     
             </section>
             <script class="main-script" src="/assets/scripts/index.js"></script>
-            <script>
-                barba.hooks.after(() => {
-                const bottomDOM = document.querySelector("body main")
-                const newScript = document.createElement("script");
-                const oldScript = document.querySelector(".main-script");
-                newScript.src = "/assets/scripts/index.js";
-                newScript.className = "main-script";
-                oldScript.remove();
-                bottomDOM.append(newScript);
-                console.log(bottomDOM)
-                newScript.setAttribute('defer', true)
-                })
-            </script>
         </main>
         <footer>
         </footer>
