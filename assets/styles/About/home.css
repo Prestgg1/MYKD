@@ -10,6 +10,9 @@ main {
     padding: 110px 0 75px;
     position: relative;
     background-image: url("https://themedox.com/demo/mykd/assets/img/bg/breadcrumb_bg01.jpg");
+    img {
+      display: none;
+    }
     &::before {
       left: 0;
       -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
@@ -38,12 +41,33 @@ main {
 
         letter-spacing: 2px;
       }
+      span.white{
+        color: white;
+        position: relative;
+        span.green{
+          margin-right: 15px;
+          &::after{
+            content: "";
+            display: inline-block;
+            background: rgb(69, 248, 130);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-left: 5px;
+            
+          }
+        }
+      }
     }
   }
-  img {
-    display: none;
-  }
+
 }
 @media (min-width: 768px) {
+  main section.main-area img{
+    display: block;
+  }
 
 }

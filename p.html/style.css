@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header nav{
+    text-align: center;
+    & *{
+        margin-left: 10px;
+    }
+    button{
+        background: yellow;
+    }
+}
+h1,h2,p{
+    text-align: center;
+}
+h1{
+    background: teal;
+    color: white;
+}
+h2{
+    background: yellow;
+}
