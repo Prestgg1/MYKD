@@ -59,7 +59,7 @@ header.insertAdjacentHTML('beforeend', `
             </ul>
         </span>
     </li>
-    <li>CONTACT <hr></li>
+    <li><a href="/pages/contact.html">CONTACT<hr></a> </li>
 </ul>
 <div class="rightmenu">
     <div class="rightmenugrup">

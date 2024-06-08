@@ -84,6 +84,15 @@ barba.init({
       document.querySelectorAll('.main-menu li')[2].classList.add("current");
     },
   },
+  {
+    namespace: 'contact',
+    beforeEnter() {
+      document.querySelectorAll('.main-menu li').forEach(element => {
+        element.classList.remove("current");
+      });
+      document.querySelectorAll('.main-menu li')[19].classList.add("current");
+    },
+  },
 ]
 });
 
