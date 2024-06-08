@@ -1,0 +1,91 @@
+main {
+  width: 100vw;
+  overflow-x: hidden;
+  section.main-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: url("https://themedox.com/demo/mykd/assets/img/bg/breadcrumb_bg02.jpg")
+      no-repeat local center;
+    background-size: cover;
+    padding: 150px 0 75px;
+    
+    position: relative;
+    &::before {
+      left: 0;
+      -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
+    }
+    &::after {
+      right: 0%;
+      -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      background-color: rgb(69, 248, 130);
+    }
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      bottom: 0;
+      background-color: rgb(69, 248, 130);
+      height: clamp(30px, 5vh, 50px);
+    }
+    div.header {
+      text-align: center;
+      h1 {
+        font-size: 50px;
+        color: white;
+
+        letter-spacing: 2px;
+      }
+      span.white {
+        color: white;
+        position: relative;
+        span.green {
+          margin-right: 15px;
+          &::after {
+            content: "";
+            display: inline-block;
+            background: rgb(69, 248, 130);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+section.form {
+  padding: 140px 0 125px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f161b;
+  form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+  }
+}
+section.contact-app {
+  width: 100%;
+  iframe {
+    width: 100%;
+    height: 600px;
+  }
+  @media (max-width: 1500px) {
+    iframe {
+      height: 450px;
+    }
+  }
+}
