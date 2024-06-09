@@ -11,7 +11,7 @@ main {
       no-repeat local center;
     background-size: cover;
     padding: 150px 0 75px;
-    
+
     position: relative;
     &::before {
       left: 0;
@@ -71,10 +71,46 @@ section.form {
   justify-content: center;
   align-items: center;
   background-color: #0f161b;
+  .texts {
+    h2 {
+      font-size: 45px;
+      font-weight: bolder;
+      margin: 0 0 21px;
+    }
+    p {
+      font-weight: 1em;
+      margin: 0 0 0;
+    }
+    h3 {
+      text-transform: uppercase;
+      position: relative;
+      font-size: 18px;
+      padding-left: 30px;
+      letter-spacing: 1px;
+      margin: 0 0 20px;
+    }
+  }
   form {
-    display: flex;
-    flex-direction: column;
+    display: gird;
+    grid-template-areas: "Name Email" "Message submit";
     border: 1px solid white;
+    input[type="text"] {
+      grid-area: "Name";
+    }
+    input[type="email"] {
+      grid-area: "Email";
+    }
+    input[type="submit"] {
+      grid-area: "submit";
+      background-color: rgb(69, 248, 130);
+      color: white;
+      font-weight: bolder;
+      border: none;
+      padding: 10px 20px;
+    }
+    textarea {
+      grid-area: "Message";
+    }
   }
 }
 section.contact-app {

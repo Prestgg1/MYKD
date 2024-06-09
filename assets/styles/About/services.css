@@ -1,0 +1,11 @@
+section.services-area{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background-color: #040608;
+    .images{
+        .deactive{
+            display: none;
+        }
+    }
+}
