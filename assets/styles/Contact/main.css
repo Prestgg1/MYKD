@@ -70,8 +70,13 @@ section.form {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
   background-color: #0f161b;
   .texts {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    flex-basis: 80%;
     h2 {
       font-size: 45px;
       font-weight: bolder;
@@ -91,17 +96,34 @@ section.form {
     }
   }
   form {
-    display: gird;
-    grid-template-areas: "Name Email" "Message submit";
-    border: 1px solid white;
+    flex-basis: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem 1rem; 
+    grid-template-areas: 
+    "name email ."
+    "textarea textarea ."
+    "submit . ."; 
+    input,
+    textarea {
+      outline: none;
+      background-color: transparent;
+      border: 1px solid #262f39;
+      padding: 15px 25px;
+      color: white;
+    }
+    textarea {
+      grid-area: textarea;
+    }
     input[type="text"] {
-      grid-area: "Name";
+      grid-area: name;
     }
     input[type="email"] {
-      grid-area: "Email";
+      grid-area: email;
     }
     input[type="submit"] {
-      grid-area: "submit";
+      grid-area: submit;
       background-color: rgb(69, 248, 130);
       color: white;
       font-weight: bolder;
@@ -123,5 +145,10 @@ section.contact-app {
     iframe {
       height: 450px;
     }
+  }
+}
+@media (min-width: 768px) {
+  main section.form form,main section.form .texts{
+    flex-basis: 30%;
   }
 }
