@@ -21,7 +21,7 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    background: url("https://themedox.com/demo/mykd/assets/img/slider/slider_bg.jpg")
+    background: url("/assets/images/slider_bg.jpg")
       no-repeat scroll;
     background-size: cover;
     background-position: center center;

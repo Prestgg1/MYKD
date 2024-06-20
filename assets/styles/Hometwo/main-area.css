@@ -3,7 +3,7 @@ main {
     width: 100%;
     overflow-x: hidden;
   section.main-area {
-    background: url("https://themedox.com/demo/mykd/assets/img/slider/banner_bg.jpg")
+    background: url("/assets/images/banner_bg.jpg")
       no-repeat center center;
     background-size: cover;
     padding: 310px 0 295px;

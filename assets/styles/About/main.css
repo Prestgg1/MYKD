@@ -16,7 +16,7 @@ main {
     height: 100%;
     padding: 110px 0 75px;
     position: relative;
-    background-image: url("https://themedox.com/demo/mykd/assets/img/bg/breadcrumb_bg01.jpg");
+    background-image: url("/assets/images/breadcrumb_bg01.jpg");
     img {
       display: none;
       &:hover{
