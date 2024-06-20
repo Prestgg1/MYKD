@@ -226,7 +226,7 @@ document.onclick = (e) => {
     rightnavpc.style.right = "-100%";
   }
 };
-const audio = new Audio("/assets/sounds/click.mp3");
+const audio = new Audio("/assets/sounds/click.wav");
 
 bars.addEventListener("click", () => {
   audio.play();
@@ -245,8 +245,9 @@ document
 /* rightnavmobile */
 
 /* rightnavpc */
+
 document.querySelector(".burger").addEventListener("click", () => {
-    audio.play();
+  audio.play();
   rightnavpc.style.right = 0;
 });
 document.querySelector(".rightnavpc .logo-and-exit .exit").onclick = () => {
