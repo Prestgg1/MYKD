@@ -226,13 +226,17 @@ document.onclick = (e) => {
     rightnavpc.style.right = "-100%";
   }
 };
+const audio = new Audio("/assets/sounds/click.mp3");
+
 bars.addEventListener("click", () => {
+  audio.play();
   document.querySelector(".rightnav").classList.toggle("navactive");
 });
 
 document
   .querySelector(".rightnavcontainer .logo-and-exit .exit")
   .addEventListener("click", () => {
+    audio.play();
     rightnav.classList.remove("navactive");
   });
 
@@ -242,6 +246,7 @@ document
 
 /* rightnavpc */
 document.querySelector(".burger").addEventListener("click", () => {
+    audio.play();
   rightnavpc.style.right = 0;
 });
 document.querySelector(".rightnavpc .logo-and-exit .exit").onclick = () => {
