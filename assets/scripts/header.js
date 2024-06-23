@@ -68,7 +68,7 @@ header.insertAdjacentHTML(
         <i onclick="document.querySelector('#search-sheet').style.top=0" class="fa-solid fa-magnifying-glass"></i>
         <hr>
         <div class="button button-transparent">
-            <a href="https://themedox.com/mykd/my-account/" class="tg-border-btn">
+            <a href="#" class="tg-border-btn">
                 <svg preserveAspectRatio="none" viewBox="0 0 157 48" >
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M131.75 2L155.75 25L131.75 47L148.75 24L131.75 2Z" fill="rgb(69,248,130)"></path>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M25 1L1 24.5111L25 47L8 23.4889L25 1Z" fill="rgb(69,248,130)"></path>
@@ -227,6 +227,7 @@ document.onclick = (e) => {
   }
 };
 const audio = new Audio("/assets/sounds/click.wav");
+const remove = new Audio("/assets/sounds/remove.wav");
 
 bars.addEventListener("click", () => {
   audio.play();
@@ -236,7 +237,7 @@ bars.addEventListener("click", () => {
 document
   .querySelector(".rightnavcontainer .logo-and-exit .exit")
   .addEventListener("click", () => {
-    audio.play();
+    remove.play();
     rightnav.classList.remove("navactive");
   });
 
@@ -251,6 +252,7 @@ document.querySelector(".burger").addEventListener("click", () => {
   rightnavpc.style.right = 0;
 });
 document.querySelector(".rightnavpc .logo-and-exit .exit").onclick = () => {
+  remove.play();
   rightnavpc.style.right = "-100%";
 };
 AOS.init();
