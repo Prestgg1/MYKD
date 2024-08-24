@@ -1,15 +1,19 @@
 var allimages = document.querySelectorAll(".mySwiper .swiper-slide img");
 var swipper = new Swiper(".Swipper", {
-  slidesPerView: (() => {
-    if (window.innerWidth > 1000) {
-      return 3;
-    } else if (window.innerWidth > 768 && window.innerWidth < 1000) {
-      return 2;
-    } else {
-      return 1;
-    }
-  })(),
+  slidesPerView: 1,
   spaceBetween: 20,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+  },
   loop: true,
   navigation: {
     nextEl: ".swiper-sag",
@@ -43,7 +47,19 @@ allimages.forEach((element) => {
 });
 var swiper = new Swiper(".mySwiper", {
   watchSlidesProgress: true,
-  slidesPerView: window.innerWidth > 768 ? 3 : 1,
+  slidesPerView: 1,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+  },
   spaceBetween: 30,
   effect: "coverflow",
   grabCursor: true,
